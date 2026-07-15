@@ -30,6 +30,7 @@
   "bundle": {
     "active": true,
     "targets": "all",
+    "icon": ["icons/icon.png", "icons/icon.ico"],
     "shortDescription": "リベシティ非公式デスクトップアプリ",
     "longDescription": "リベシティと関連サービスを複数タブで利用する非公式デスクトップアプリです。",
     "copyright": "Copyright © 2026 Tatsuya-Dragon"
