@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Minimum permissions for the Libe Desk application shell","local":true,"windows":["main"],"permissions":["core:default","core:webview:allow-get-all-webviews","core:webview:allow-webview-position","core:webview:allow-webview-size","core:webview:allow-set-webview-focus","opener:default"]}}

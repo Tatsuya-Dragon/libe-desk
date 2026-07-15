@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Libe Desk",
+  "version": "0.1.0",
+  "identifier": "jp.tatsuya-dragon.libe-desk",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "security": {
+      "csp": "default-src 'self'; connect-src ipc: http://ipc.localhost; img-src 'self' asset: data:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    },
+    "windows": [
+      {
+        "label": "main",
+        "title": "Libe Desk",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 1024,
+        "minHeight": 700,
+        "resizable": true,
+        "fullscreen": false,
+        "devtools": false
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "shortDescription": "リベシティ非公式デスクトップアプリ",
+    "longDescription": "リベシティと関連サービスを複数タブで利用する非公式デスクトップアプリです。",
+    "copyright": "Copyright © 2026 Tatsuya-Dragon"
+  }
+}

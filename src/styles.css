@@ -1,0 +1,37 @@
+:root { font-family: Inter, "Hiragino Sans", "Yu Gothic UI", sans-serif; color: #29332e; background: #f4f7f5; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+button { font: inherit; }
+.app-shell { display: grid; grid-template-columns: 184px 1fr; width: 100vw; height: 100vh; background: #eef4f0; }
+.sidebar { display: flex; flex-direction: column; padding: 14px 10px; color: #264234; background: linear-gradient(180deg, #fafffb, #eaf5ee); border-right: 1px solid #cfe0d6; }
+.brand { display: flex; align-items: center; gap: 9px; padding: 4px 8px 18px; }
+.brand-mark, .empty-icon { display: grid; place-items: center; color: white; background: #35a86b; border-radius: 12px; font-weight: 800; }
+.brand-mark { width: 34px; height: 34px; }
+.sidebar nav { display: grid; gap: 6px; }
+.service-button { display: grid; grid-template-columns: 28px 1fr; gap: 8px; align-items: center; width: 100%; padding: 10px; text-align: left; color: inherit; background: transparent; border: 0; border-radius: 10px; cursor: pointer; }
+.service-button:hover, .service-button:focus-visible { background: #dceee3; outline: 2px solid #45a875; outline-offset: -2px; }
+.sidebar-footer { margin-top: auto; display: flex; gap: 10px; padding: 10px; color: #617069; }
+.workspace { min-width: 0; display: grid; grid-template-rows: 44px 48px 1fr 25px; }
+.tabs { display: flex; align-items: end; gap: 3px; padding: 7px 8px 0; overflow-x: auto; background: #e2ebe6; }
+.tab { min-width: 130px; max-width: 220px; height: 37px; display: flex; gap: 8px; align-items: center; padding: 0 9px 0 12px; color: #53625a; background: #d3dfd8; border: 1px solid transparent; border-radius: 10px 10px 0 0; cursor: pointer; }
+.tab.active { color: #24352c; background: white; border-color: #c7d6ce; border-bottom-color: white; }
+.tab-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+.tab-close { font-size: 18px; line-height: 1; }
+.new-tab { align-self: center; border: 0; background: transparent; font-size: 22px; color: #3d6651; cursor: pointer; }
+.toolbar { display: grid; grid-template-columns: 36px 36px 36px 1fr; align-items: center; gap: 4px; padding: 6px 10px; background: white; border-bottom: 1px solid #d5e0da; }
+.toolbar button { height: 32px; border: 0; border-radius: 8px; background: transparent; cursor: pointer; }
+.toolbar button:hover:not(:disabled), .toolbar button:focus-visible { background: #e9f2ed; outline: 2px solid #45a875; }
+.toolbar button:disabled { opacity: .35; cursor: default; }
+.address-form { display: grid; grid-template-columns: 1fr 52px; gap: 5px; min-width: 0; }
+.address { min-width: 0; overflow: hidden; padding: 7px 12px; color: #66756d; background: #f2f6f4; border: 1px solid #dce5e0; border-radius: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.address:focus { outline: 2px solid #45a875; border-color: transparent; }
+.address-form button { background: #e3f2e9; color: #29533c; font-size: 13px; }
+.webview-space { position: relative; background: white; }
+.empty-state { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; text-align: center; color: #53645b; }
+.empty-icon { width: 72px; height: 72px; font-size: 36px; border-radius: 22px; box-shadow: 0 12px 30px #35a86b33; }
+.empty-state h1 { margin: 20px 0 4px; color: #2a4436; font-size: 24px; }
+.status { display: flex; align-items: center; gap: 7px; padding: 0 10px; color: #6a776f; background: #f5f8f6; border-top: 1px solid #dfe7e2; font-size: 12px; }
+.status span { width: 7px; height: 7px; border-radius: 50%; background: #48a874; }
+.status span.pulse { animation: pulse 1s infinite alternate; }
+@keyframes pulse { to { opacity: .25; } }
+@media (prefers-color-scheme: dark) { :root { color: #dde9e1; background: #17201b; } .app-shell { background: #17201b; } .sidebar { color: #d9e9df; background: #1c2a22; border-color: #304237; } .service-button:hover { background: #2b4234; } .workspace, .tabs { background: #1b2720; } .tab { background: #293a30; color: #b9c8bf; } .tab.active, .toolbar, .webview-space { background: #202d25; color: #e3eee7; } .address, .status { background: #1a251f; color: #aab9b0; border-color: #34453b; } }
